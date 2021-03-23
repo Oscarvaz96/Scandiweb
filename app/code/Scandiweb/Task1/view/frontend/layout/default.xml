@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="head.additional">
+            <block class="Scandiweb\Task1\Block\Main" name="language_hreflang" template="Scandiweb_Task1::head_href.phtml" after="head.additional.asset-wrapper"/>
+        </referenceBlock>
+
+        <!-- <referenceContainer name="content">
+            <block class="Scandiweb\Task1\Block\Main" name="cms_collection" template="Scandiweb_Task1::head_href.phtml"/>
+        </referenceContainer>    -->
+    </body>
+</page>

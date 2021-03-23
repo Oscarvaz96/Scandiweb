@@ -1,0 +1,23 @@
+<?php
+
+  $storeLanguage = $block->getLocale();
+  $page_id = $block->getPageId();
+  $page_identifier = $block->getCmsPageIdentifier();
+  $baseUrl = $block->getBaseUrl();
+  $stores = $block->getStores();
+//   echo "PAGE ID: ".$cms_id;
+//   print_r($stores);
+
+ if(array_count_values($stores) > 0)
+    {
+        foreach ($stores as $key => $value)
+        {
+            $store = $block->getStoreById($value);
+            echo "<link rel='alternate' hreflang=".$store->getLocaleCode()." href=".$store->getBaseUrl().$page_identifier." />";
+        }
+        
+    }
+ else{
+    echo "<link rel='alternate' hreflang=".$storeLanguage." href=".$baseUrl.$page_identifier." />";
+ }
+?>
